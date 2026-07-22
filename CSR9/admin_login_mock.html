@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+<title>Log in | Django site admin</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+        color: #333;
+        background: #f8f8f8;
+        font-size: 14px;
+    }
+    #header {
+        width: auto;
+        height: 40px;
+        padding: 10px 40px;
+        background: #417690;
+        color: #ffc;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+    }
+    #branding h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        color: #f5dd5d;
+        font-weight: 300;
+    }
+    #branding h1 a:link, #branding h1 a:visited {
+        color: #f5dd5d;
+        text-decoration: none;
+    }
+    #content {
+        padding: 20px 40px;
+    }
+    #content-main {
+        float: left;
+        width: 100%;
+    }
+    .login {
+        margin: 50px auto 0;
+        width: 28em;
+    }
+    .login form {
+        margin: 0;
+        padding: 0;
+    }
+    .login .form-row {
+        padding: 10px;
+        margin: 0 0 15px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+    }
+    .login .form-row label {
+        padding: 0 0 5px;
+        display: block;
+        font-weight: bold;
+        color: #666;
+    }
+    .login .form-row input[type="text"], .login .form-row input[type="password"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        width: calc(100% - 18px);
+    }
+    .submit-row {
+        padding: 10px 0;
+        text-align: right;
+    }
+    .submit-row input[type="submit"] {
+        background: #79aec8;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .submit-row input[type="submit"]:hover {
+        background: #609ab6;
+    }
+</style>
+</head>
+<body class=" login" data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+            <h1 id="site-name"><a href="#">Django administration</a></h1>
+        </div>
+    </div>
+    <!-- END Header -->
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <div id="content-main">
+
+<div class="login">
+    <form action="" method="post" id="login-form"><input type="hidden" name="csrfmiddlewaretoken" value="dummytoken">
+        <div class="form-row">
+            <label class="required" for="id_username">Username:</label> 
+            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" value="root">
+        </div>
+        <div class="form-row">
+            <label class="required" for="id_password">Password:</label> 
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password" value="********">
+        </div>
+        
+        <div class="submit-row">
+            <input type="submit" value="Log in">
+        </div>
+    </form>
+</div>
+
+        </div>
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+</div>
+<!-- END Container -->
+
+</body>
+</html>

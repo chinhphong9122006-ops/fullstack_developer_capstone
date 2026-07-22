@@ -1,0 +1,42 @@
+curl -X GET http://127.0.0.1:8000/djangoapp/get_cars
+
+{
+  "CarModels": [
+    {
+      "make": "Toyota",
+      "models": [
+        {"id": 1, "name": "Camry", "type": "Sedan", "year": 2020},
+        {"id": 2, "name": "Corolla", "type": "Sedan", "year": 2021},
+        {"id": 3, "name": "RAV4", "type": "SUV", "year": 2022}
+      ]
+    },
+    {
+      "make": "Honda",
+      "models": [
+        {"id": 4, "name": "Civic", "type": "Sedan", "year": 2022},
+        {"id": 5, "name": "Accord", "type": "Sedan", "year": 2021}
+      ]
+    },
+    {
+      "make": "Ford",
+      "models": [
+        {"id": 6, "name": "Mustang", "type": "Coupe", "year": 2020},
+        {"id": 7, "name": "F-150", "type": "Truck", "year": 2022}
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "models": [
+        {"id": 8, "name": "Silverado", "type": "Truck", "year": 2022},
+        {"id": 9, "name": "Malibu", "type": "Sedan", "year": 2020}
+      ]
+    },
+    {
+      "make": "Nissan",
+      "models": [
+        {"id": 10, "name": "Altima", "type": "Sedan", "year": 2022},
+        {"id": 11, "name": "Rogue", "type": "SUV", "year": 2023}
+      ]
+    }
+  ]
+}

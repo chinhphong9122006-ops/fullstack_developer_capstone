@@ -1,0 +1,16 @@
+curl -X GET http://127.0.0.1:8000/fetchReviews/dealer/1
+
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "dealership": 1,
+    "review": "Great service!",
+    "purchase": true,
+    "purchase_date": "2023-10-10",
+    "car_make": "Toyota",
+    "car_model": "Camry",
+    "car_year": 2020,
+    "sentiment": "positive"
+  }
+]

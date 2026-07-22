@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+<title>Site administration | Django site admin</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+        color: #333;
+        background: #f8f8f8;
+        font-size: 14px;
+    }
+    #header {
+        width: auto;
+        height: 40px;
+        padding: 10px 40px;
+        background: #417690;
+        color: #ffc;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #branding h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        color: #f5dd5d;
+        font-weight: 300;
+    }
+    #branding h1 a:link, #branding h1 a:visited {
+        color: #f5dd5d;
+        text-decoration: none;
+    }
+    #user-tools {
+        font-weight: 300;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #ffc;
+    }
+    #user-tools a {
+        border-bottom: 1px solid rgba(255,255,255,0.25);
+        color: #fff;
+        text-decoration: none;
+    }
+    #content {
+        padding: 20px 40px;
+    }
+    h1 {
+        margin: 0 0 20px;
+        font-weight: 300;
+        font-size: 20px;
+        color: #666;
+    }
+    .module {
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        background: #fff;
+        border-radius: 4px;
+    }
+    .module h2 {
+        margin: 0;
+        padding: 8px;
+        font-size: 13px;
+        font-weight: bold;
+        background: #79aec8;
+        color: #fff;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    .module table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .module td, .module th {
+        padding: 8px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+    .module td a {
+        color: #447e9b;
+        text-decoration: none;
+    }
+    .module td a:hover {
+        color: #036;
+    }
+</style>
+</head>
+<body class="dashboard" data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+            <h1 id="site-name"><a href="#">Django administration</a></h1>
+        </div>
+        <div id="user-tools">
+            Welcome,
+            <strong>root</strong>.
+            <a href="/">View site</a> /
+            <a href="/admin/password_change/">Change password</a> /
+            <a href="/admin/logout/">Log out</a>
+        </div>
+    </div>
+    <!-- END Header -->
+
+    <!-- Content -->
+    <div id="content" class="colMS">
+        
+        <h1>Site administration</h1>
+        
+        <div id="content-main">
+            <div class="app-auth module">
+                <h2>Authentication and Authorization</h2>
+                <table>
+                    <tr>
+                        <th scope="row"><a href="/admin/auth/group/">Groups</a></th>
+                        <td><a href="/admin/auth/group/add/" class="addlink">Add</a></td>
+                        <td><a href="/admin/auth/group/" class="changelink">Change</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="/admin/auth/user/">Users</a></th>
+                        <td><a href="/admin/auth/user/add/" class="addlink">Add</a></td>
+                        <td><a href="/admin/auth/user/" class="changelink">Change</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="app-djangoapp module">
+                <h2>Djangoapp</h2>
+                <table>
+                    <tr>
+                        <th scope="row"><a href="/admin/djangoapp/carmake/">Car makes</a></th>
+                        <td><a href="/admin/djangoapp/carmake/add/" class="addlink">Add</a></td>
+                        <td><a href="/admin/djangoapp/carmake/" class="changelink">Change</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="/admin/djangoapp/carmodel/">Car models</a></th>
+                        <td><a href="/admin/djangoapp/carmodel/add/" class="addlink">Add</a></td>
+                        <td><a href="/admin/djangoapp/carmodel/" class="changelink">Change</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+</div>
+<!-- END Container -->
+
+</body>
+</html>
